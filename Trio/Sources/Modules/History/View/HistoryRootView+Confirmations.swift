@@ -20,8 +20,9 @@ extension History.RootView {
                     switch target {
                     case let .glucose(glucose):
                         state.invokeGlucoseDeletionTask(glucose.objectID)
-                    case let .insulin(pumpEvent):
-                        state.invokeInsulinDeletionTask(pumpEvent.objectID)
+                    // Don't allow deleting
+                    //case let .insulin(pumpEvent):
+                    //    state.invokeInsulinDeletionTask(pumpEvent.objectID)
                     case let .carbs(carbEntry):
                         state.invokeCarbDeletionTask(
                             carbEntry.objectID,
